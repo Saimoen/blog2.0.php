@@ -9,7 +9,6 @@
   flex: 30%;
   margin: 1rem;
   min-height: 41rem;
-  min-width: 25rem;
   cursor: pointer;
 }
 
@@ -33,9 +32,32 @@
   transition: transform 1s;
 }
 
+.article-author {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.article-author p {
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
 .newsfeed-container {
   display: flex;
   flex-flow: row nowrap;
+}
+
+@media only screen and (max-width: 800px) {
+  .category-container {
+    display: none;
+  }
+  .articles-container {
+    flex-flow: column;
+    align-items: unset;
+  }
 }
 
 .category-container {
