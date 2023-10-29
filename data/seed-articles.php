@@ -3,7 +3,7 @@ $articles = json_decode(file_get_contents(__DIR__ . '/articles.json'), true);
 
 $dns = 'mysql:host=localhost;dbname=blog';
 $user = 'root';
-$pwd = 'Gregsaimoen12@';
+$pwd = 'root';
 
 $pdo = new PDO($dns, $user, $pwd);
 

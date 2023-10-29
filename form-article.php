@@ -36,11 +36,11 @@ if ($id) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   $_POST = filter_input_array(INPUT_POST, [
-    'title' => FILTER_SANITIZE_STRING,
+    'title' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
     'image' => FILTER_SANITIZE_URL,
-    'category' => FILTER_SANITIZE_STRING,
+    'category' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
     'content' => [
-      'filter' => FILTER_SANITIZE_STRING,
+      'filter' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
       'flags' => FILTER_FLAG_NO_ENCODE_QUOTES
     ]
   ]);
@@ -129,9 +129,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <div class="form-control">
             <label for="category">Catégorie</label>
             <select name="category" id="category">
-              <option <?= !$category || $category === 'technologie' ? 'selected' : '' ?> value="technologie">Technologie</option>
-              <option <?= $category === 'nature' ? 'selected' : '' ?> value="nature">Nature</option>
-              <option <?= $category === 'politique' ? 'selected' : '' ?> value="politique">Politique</option>
+              <option <?= !$category || $category === 'Terre' ? 'selected' : '' ?> value="Terre">Terre</option>
+              <option <?= $category === 'Mer' ? 'selected' : '' ?> value="Mer">Mer</option>
+              <option <?= $category === 'Urbain' ? 'selected' : '' ?> value="Urbain">Urbain</option>
             </select>
             <?php if ($errors['category']) : ?>
               <p class="text-danger"><?= $errors['category'] ?></p>
