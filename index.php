@@ -44,7 +44,7 @@ if (count($articles)) {
 </head>
 
 <body>
-  <div class="container">
+  <div class="container1">
     <?php require_once 'includes/header.php' ?>
     <div class="content">
       <div class="newsfeed-container">

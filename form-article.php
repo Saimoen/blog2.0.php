@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-  <div class="container">
+  <div class="container1">
     <?php require_once 'includes/header.php' ?>
     <div class="content">
       <div class="block p-20 form-container">

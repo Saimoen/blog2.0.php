@@ -34,3 +34,27 @@ ADD CONSTRAINT `fk_article_user`
   REFERENCES `blog`.`user` (`id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+  
+ALTER TABLE `blog`.`comment`
+ADD COLUMN `id_author` INT NULL AFTER `id`;
+
+ALTER TABLE `blog`.`comment`
+ADD INDEX `fk_comment_user_idx` (`id_author` ASC) VISIBLE;
+
+ALTER TABLE `blog`.`comment`
+ADD CONSTRAINT `fk_comment_user`
+  FOREIGN KEY (`id_author`)
+  REFERENCES `blog`.`user` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+use blog;  
+
+select * from blog.comment;
+
+SELECT comment.content, comment.id_article article, user.firstname prenom, user.lastname nom
+FROM comment
+LEFT JOIN user ON comment.id_author = user.id
+LEFT JOIN article ON comment.id_article = article.id;
+
+SELECT comment.content, comment.id_author FROM comment LEFT JOIN article ON comment.id_article = article.id

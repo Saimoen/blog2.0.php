@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container1">
         <?php require_once 'includes/header.php' ?>
         <div class="content">
             <h1 style="font-size:7rem;text-align:center;">Oops une erreur est survenue</h1>

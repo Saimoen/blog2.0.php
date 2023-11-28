@@ -11,10 +11,10 @@ $currentUser = $currentUser ?? false;
         <ul class="header-mobile-list">
             <?php if ($currentUser) : ?>
                 <li class=<?= $_SERVER['REQUEST_URI'] === '/form-article.php' ? 'active' : '' ?>>
-                    <a href="/form-article.php">Écrire un article</a>
+                    <a href="/form-article.php" style="color: white;">Écrire un article</a>
                 </li>
                 <li>
-                    <a href="/auth-logout.php">Déconnexion</a>
+                    <a href="/auth-logout.php" style="color: white">Déconnexion</a>
                 </li>
                 <li class="<?= $_SERVER['REQUEST_URI'] === '/profile.php' ? 'active' : '' ?>">
                     <a href="/profile.php">Mon espace</a>

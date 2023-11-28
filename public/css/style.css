@@ -47,9 +47,14 @@ a {
   text-decoration: none;
 }
 
+.navbar {
+  text-decoration: none;
+  color: white;
+}
+
 /* container */
 
-.container {
+.container1 {
   font-size: 1.6rem;
   min-height: 100vh;
   display: flex;

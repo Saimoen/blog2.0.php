@@ -24,6 +24,7 @@
 .article h3 {
   font-size: 1.7rem;
   padding: 1rem 1.5rem;
+  color: #000;
 }
 
 .img-container {
@@ -76,4 +77,17 @@
 .cat-active {
   color: var(--primary);
   font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+a:link {
+  color: white;
+}
+
+a:visited .navbar {
+  color: white;
 }

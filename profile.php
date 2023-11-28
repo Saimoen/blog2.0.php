@@ -24,7 +24,7 @@ $articles = $articleDB->fetchUserArticle($currentUser['id']);
 </head>
 
 <body>
-    <div class="container">
+    <div class="container1">
         <?php require_once 'includes/header.php' ?>
         <div class="content">
             <h1>Mon espace</h1>
