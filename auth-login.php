@@ -60,14 +60,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="block p-20 form-container">
                 <h1>Connexion</h1>
                 <form action="/auth-login.php" , method="POST">
-                    <div class="form-control">
+                    <div class="form-control1">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" value="<?= $email ?? '' ?>">
                         <?php if ($errors['email']) : ?>
                             <p class="text-danger"><?= $errors['email'] ?></p>
                         <?php endif; ?>
                     </div>
-                    <div class="form-control">
+                    <div class="form-control1">
                         <label for="password">Mot de passe</label>
                         <input type="password" name="password" id="password">
                         <?php if ($errors['password']) : ?>

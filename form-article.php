@@ -112,21 +112,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="block p-20 form-container">
         <h1><?= $id ? 'Modifier' : 'Écrire' ?> un article</h1>
         <form action="/form-article.php<?= $id ? "?id=$id" : '' ?>" , method="POST">
-          <div class="form-control">
+          <div class="form-control1">
             <label for="title">Titre</label>
             <input type="text" name="title" id="title" value="<?= $title ?? '' ?>">
             <?php if ($errors['title']) : ?>
               <p class="text-danger"><?= $errors['title'] ?></p>
             <?php endif; ?>
           </div>
-          <div class="form-control">
+          <div class="form-control1">
             <label for="image">Image</label>
             <input type="text" name="image" id="image" value="<?= $image ?? '' ?>">
             <?php if ($errors['image']) : ?>
               <p class="text-danger"><?= $errors['image'] ?></p>
             <?php endif; ?>
           </div>
-          <div class="form-control">
+          <div class="form-control1">
             <label for="category">Catégorie</label>
             <select name="category" id="category">
               <option <?= !$category || $category === 'Terre' ? 'selected' : '' ?> value="Terre">Terre</option>
@@ -137,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <p class="text-danger"><?= $errors['category'] ?></p>
             <?php endif; ?>
           </div>
-          <div class="form-control">
+          <div class="form-control1">
             <label for="content">Content</label>
             <textarea name="content" id="content"><?= $content ?? '' ?></textarea>
             <?php if ($errors['content']) : ?>
