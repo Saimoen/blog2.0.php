@@ -138,8 +138,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
           </div>
           <div class="form-control1">
-            <label for="content">Content</label>
-            <textarea name="content" id="content"><?= $content ?? '' ?></textarea>
+            <label for="content">Contenu</label>
+            <textarea style="height: 178px;" name="content" id="content"><?= $content ?? '' ?></textarea>
             <?php if ($errors['content']) : ?>
               <p class="text-danger"><?= $errors['content'] ?></p>
             <?php endif; ?>
